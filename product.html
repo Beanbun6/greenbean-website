@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products - GreenBean Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #371801;
+    }
+
+    header {
+      background-color: #0e482e;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .products {
+      padding: 40px;
+      text-align: center;
+      background-color: #2d180e;
+      color: #ffffff;
+    }
+
+    .products h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .product {
+      display: inline-block;
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 15px 0 10px;
+      color: #5C3D2E;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .product button {
+      margin-top: 10px;
+      background-color: #4B2E2E;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .product button:hover {
+      background-color: #6e3e3e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.webp" alt="GreenBean Coffee Logo" height="60" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Our Coffee Collection</h2>
+
+    <div class="product">
+      <img src="product1.webp" alt="Arabica Beans" />
+      <h3>Arabica Beans</h3>
+      <p>Smooth, balanced, and perfect for everyday sipping.</p>
+      <p><strong>₹250</strong></p>
+      <button class="add-to-cart" data-name="Arabica Beans" data-price="250" data-image="product1.webp">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="product2.webp" alt="Robusta Beans" />
+      <h3>Robusta Beans</h3>
+      <p>Strong and bold — for those who like a kick in their cup.</p>
+      <p><strong>₹200</strong></p>
+      <button class="add-to-cart" data-name="Robusta Beans" data-price="200" data-image="product2.webp">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="product3.jpg" alt="Cold Brew Blend" />
+      <h3>Cold Brew Blend</h3>
+      <p>A refreshing, smooth blend made for cold brew lovers.</p>
+      <p><strong>₹300</strong></p>
+      <button class="add-to-cart" data-name="Cold Brew Blend" data-price="300" data-image="product3.jpg">Add to Cart</button>
+    </div>
+  </section>
+
+  <script>
+  const buttons = document.querySelectorAll('.add-to-cart');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const product = {
+        name: button.getAttribute('data-name'),
+        price: parseInt(button.getAttribute('data-price')),
+        image: button.getAttribute('data-image')
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      window.location.href = "cart.html";
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+

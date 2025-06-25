@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - GreenBean Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3e5dc;
+      color: #333;
+    }
+
+    header {
+      background-color: #5c3d2e;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .checkout {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .checkout h2 {
+      text-align: center;
+      color: #5c3d2e;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .total {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .payment {
+      margin-top: 30px;
+    }
+
+    .payment label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .payment select, .payment input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .checkout button {
+      width: 100%;
+      background-color: #5c3d2e;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .checkout button:hover {
+      background-color: #7b4a37;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.webp" alt="GreenBean Coffee Logo" height="60">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="product.html">Products</a>
+      <a href="checkout.html">Cart</a>
+    </nav>
+  </header>
+
+  <div class="checkout">
+    <h2>Your Cart</h2>
+    <div class="item">
+      <span>Arabica Beans</span>
+      <span>₹250</span>
+    </div>
+    <div class="item">
+      <span>Robusta Beans</span>
+      <span>₹200</span>
+    </div>
+    <div class="total">
+      Total: ₹450
+    </div>
+
+    <div class="payment">
+      <label for="method">Payment Method</label>
+      <select id="method">
+        <option value="upi">UPI</option>
+        <option value="card">Credit/Debit Card</option>
+        <option value="cod">Cash on Delivery</option>
+      </select>
+
+      <label for="address">Delivery Address</label>
+      <input type="text" id="address" placeholder="Enter your address" required />
+
+      <button>Confirm Order</button>
+    </div>
+  </div>
+</body>
+</html>
