@@ -43,10 +43,9 @@ This multi-page site showcases a fictional coffee brand's products, story, and s
 Made with ☕, ❤️, and HTML by **Beanbun6**  
 📅 Created: July 2025  
 📍 Project for learning + showcasing frontend skills
-
+✨ This project is part of my personal learning — please don’t copy or reuse without permission.
+💡 I'm open to suggestions and contributions! Feel free to open an issue or pull request if you’d like to collaborate.
 ------------
   
 “Coffee — a poem in a cup, warmth wrapped in silence.”
 Thanks for visiting! 
-
-✨ This project is part of my personal learning — please don’t copy or reuse without permission.
