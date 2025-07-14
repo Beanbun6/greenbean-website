@@ -49,4 +49,4 @@ Made with ☕, ❤️, and HTML by **Beanbun6**
 “Coffee — a poem in a cup, warmth wrapped in silence.”
 Thanks for visiting! 
 
-“This project is part of my personal learning and portfolio. Please don’t copy or reuse without permission.”
+✨ This project is part of my personal learning — please don’t copy or reuse without permission.
